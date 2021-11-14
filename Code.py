@@ -12,7 +12,7 @@ url_1_DELL = 'https://www.dell.com/community/XPS/bd-p/XPS'
 #Store the HTML of web page.
 htmlfile = requests.get(url_1_DELL)
 #Read the HTML via Beautifulsoup tool
-objSoup = bs4.BeautifulSoup(htmlfile.text,'')
+objSoup = bs4.BeautifulSoup(htmlfile.text,'html')
 #Set the location according to the tags of data that we need.
 items_title = objSoup.find_all('span','lia-message-unread')
 items_date = objSoup.find_all('div','lia-info-area')
