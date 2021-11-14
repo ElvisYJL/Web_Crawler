@@ -5,8 +5,6 @@
 
 
 import requests, bs4, time, datetime, csv
-import pandas as pd
-from pandas import DataFrame
 import xlwings as xw
 
 #The Web page to scrape. DELL Forum
