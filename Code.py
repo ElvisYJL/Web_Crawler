@@ -60,7 +60,7 @@ for i in range(0,11): #0-11
     #Store the HTML of web page.
     htmlfile = requests.get(url_1_DELL_Href)
     #Read the HTML via Beautifulsoup tool
-    objSoup = bs4.BeautifulSoup(htmlfile.text,'lxml')
+    objSoup = bs4.BeautifulSoup(htmlfile.text,'html')
     items_dell_account = objSoup.find_all('div','lia-message-author-rank lia-component-author-rank lia-component-message-view-widget-author-rank')
     
     dell_count = 0
@@ -201,7 +201,7 @@ for p in range(2,928): #標準參數值2-928
     url_2_NotebookReview = 'http://forum.notebookreview.com/forums/dell-xps-and-studio-xps.1049/page-{}'.format(str(p))
     
     htmlfile = requests.get(url_2_NotebookReview)
-    objSoup = bs4.BeautifulSoup(htmlfile.text,'lxml')
+    objSoup = bs4.BeautifulSoup(htmlfile.text,'html')
     items_title = objSoup.find_all('div','titleText')
     items_date = objSoup.find_all('a','faint')
     items_reply = objSoup.find_all('dl','major','dd')
