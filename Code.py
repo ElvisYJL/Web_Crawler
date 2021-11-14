@@ -254,6 +254,7 @@ for i in range(0, len(title_1)):
     print(title_view_1[i])
     print(title_href_1[i])
     print(title_dell_account[i])
+    print('---------')
 '''
 #Write to CSV
 wb = xw.Book('C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TEST_1\SPT_Web_Crawler_Tool_V2.3.xlsm')
