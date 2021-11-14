@@ -204,7 +204,7 @@ print('-----dell:', len(title_dell_account))
 time.sleep(3)
 print('\n')
 
-for p in range(2,10): #標準參數值2-928
+for p in range(2,5): #標準參數值2-928
     url_2_NotebookReview = 'http://forum.notebookreview.com/forums/dell-xps-and-studio-xps.1049/page-{}'.format(str(p))
     
     htmlfile = requests.get(url_2_NotebookReview)
@@ -248,7 +248,7 @@ for p in range(2,10): #標準參數值2-928
     print('\n')
 
 #Write to CSV
-wb = xw.Book('C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TEST_1\SPT Web Crawler Tool_V2.3.xlsm')
+wb = xw.Book('C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TEST_1\SPT_Web_Crawler_Tool_V2.3.xlsm')
 sheet = wb.sheets['Database']
 
 sheet.range('a2:a1048576').clear_contents()
@@ -265,7 +265,7 @@ sheet.range('d2').options(transpose=True).value = title_view_1[0:len(title_view_
 sheet.range('e2').options(transpose=True).value = title_href_1[0:len(title_href_1)+1]
 sheet.range('f2').options(transpose=True).value = title_dell_account[0:len(title_dell_account)+1]
 
-wb.save('C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TEST_1\SPT Web Crawler Tool_V2.3_New.xlsm')
+wb.save('C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TEST_1\SPT_Web_Crawler_Tool_V2.3_New.xlsm')
 
 
 #-----Scrape End-----
