@@ -124,7 +124,7 @@ for p in range(2,945): #2-945
         #Store the HTML of web page.
         htmlfile = requests.get(url_2_DELL_Href)
         #Read the HTML via Beautifulsoup tool
-        objSoup = bs4.BeautifulSoup(htmlfile.text,'lxml')
+        objSoup = bs4.BeautifulSoup(htmlfile.text,'html')
         items_dell_account = objSoup.find_all('div','lia-message-author-rank lia-component-author-rank lia-component-message-view-widget-author-rank')
     
         dell_count = 0
