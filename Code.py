@@ -151,6 +151,13 @@ for p in range(2,945): #2-945
     time.sleep(3)
     print('\n')
 '''
+title_1 = []
+title_date_1 = []
+title_reply_1 = []
+title_view_1 = []
+title_href_1 = []
+title_dell_account = []
+
 #The Web page to scrape. NotebookReview
 url_1_NotebookReview = 'http://forum.notebookreview.com/forums/dell-xps-and-studio-xps.1049/'
 htmlfile = requests.get(url_1_NotebookReview)
