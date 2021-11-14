@@ -247,6 +247,14 @@ for p in range(2,5): #標準參數值2-928
     time.sleep(3)
     print('\n')
 
+for i in range(0, len(title_1)):
+    print(title_1[i])
+    print(title_date_1[i])
+    print(title_reply_1[i])
+    print(title_view_1[i])
+    print(title_href_1[i])
+    print(title_dell_account[i])
+'''
 #Write to CSV
 wb = xw.Book('C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TEST_1\SPT_Web_Crawler_Tool_V2.3.xlsm')
 sheet = wb.sheets['Database']
@@ -266,7 +274,7 @@ sheet.range('e2').options(transpose=True).value = title_href_1[0:len(title_href_
 sheet.range('f2').options(transpose=True).value = title_dell_account[0:len(title_dell_account)+1]
 
 wb.save('C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TEST_1\SPT_Web_Crawler_Tool_V2.3_New.xlsm')
-
+'''
 
 #-----Scrape End-----
 theTime_finish = datetime.datetime.now().strftime(ISOTIMEFORMAT)
