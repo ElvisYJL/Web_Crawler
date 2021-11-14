@@ -93,7 +93,7 @@ for p in range(2,945): #2-945
     url_2_DELL = 'https://www.dell.com/community/XPS/bd-p/XPS/page/{}'.format(str(p))
     
     htmlfile = requests.get(url_2_DELL)
-    objSoup = bs4.BeautifulSoup(htmlfile.text,'lxml')
+    objSoup = bs4.BeautifulSoup(htmlfile.text,'html')
     items_title = objSoup.find_all('span','lia-message-unread')
     items_date = objSoup.find_all('div','lia-info-area')
     items_view = objSoup.find_all('div','lia-stats-area')
@@ -154,7 +154,7 @@ for p in range(2,945): #2-945
 #The Web page to scrape. NotebookReview
 url_1_NotebookReview = 'http://forum.notebookreview.com/forums/dell-xps-and-studio-xps.1049/'
 htmlfile = requests.get(url_1_NotebookReview)
-objSoup = bs4.BeautifulSoup(htmlfile.text,'lxml')
+objSoup = bs4.BeautifulSoup(htmlfile.text,'html')
 
 items_title = objSoup.find_all('div','titleText')
 items_date = objSoup.find_all('a','faint')
