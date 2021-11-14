@@ -6,7 +6,7 @@
 
 import requests, bs4, time, datetime, csv
 import xlwings as xw
-
+'''
 #The Web page to scrape. DELL Forum
 url_1_DELL = 'https://www.dell.com/community/XPS/bd-p/XPS'
 #Store the HTML of web page.
@@ -150,7 +150,7 @@ for p in range(2,945): #2-945
     print('-----dell:', len(title_dell_account))
     time.sleep(3)
     print('\n')
-
+'''
 #The Web page to scrape. NotebookReview
 url_1_NotebookReview = 'http://forum.notebookreview.com/forums/dell-xps-and-studio-xps.1049/'
 htmlfile = requests.get(url_1_NotebookReview)
@@ -239,7 +239,7 @@ for p in range(2,928): #標準參數值2-928
     print('-----dell:', len(title_dell_account))
     time.sleep(3)
     print('\n')
-
+'''
 #Write to CSV
 wb = xw.Book('SPT Web Crawler Tool_V2.1.xlsm')
 sheet = wb.sheets['Database']
@@ -259,7 +259,7 @@ sheet.range('e2').options(transpose=True).value = title_href_1[0:len(title_href_
 sheet.range('f2').options(transpose=True).value = title_dell_account[0:len(title_dell_account)+1]
 
 wb.save('SPT Web Crawler Tool_V2.1.xlsm')
-
+'''
 
 #-----Scrape End-----
 theTime_finish = datetime.datetime.now().strftime(ISOTIMEFORMAT)
