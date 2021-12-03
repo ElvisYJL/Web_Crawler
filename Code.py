@@ -5,8 +5,9 @@
 
 
 import requests, bs4, time, datetime, csv
-import xlwings as xw
 '''
+import xlwings as xw
+
 #The Web page to scrape. DELL Forum
 url_1_DELL = 'https://www.dell.com/community/XPS/bd-p/XPS'
 #Store the HTML of web page.
